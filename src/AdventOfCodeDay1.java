@@ -44,5 +44,20 @@ public class AdventOfCodeDay1 {
           totalDiff += i;
     }
         System.out.println(totalDiff);
+
+        int result = 0;
+        for (int i = 0; i < numbersOnLeftSide.size(); i++) {
+        int currentNumberCheck = numbersOnLeftSide.get(i);
+        //System.out.println(currentNumberCheck);
+        int rightNum = 0;
+        for (Integer integer : numbersOnRightSide) {
+            if (integer == currentNumberCheck) {
+                rightNum++;
+            }
+        }
+        result += currentNumberCheck * rightNum;
+
+    }
+        System.out.println(result);
 }
 }
